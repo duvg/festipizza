@@ -5,7 +5,7 @@
 <div class="col-md-12">
     <div class="card">
         <div class="card-header">
-        	Administrar pizzas <a href="{{ url('pizza/create') }}" class="btn btn-primary float-right">Nueva pizza</a>
+        	Administrar restaurantes <a href="{{ url('restaurant/create') }}" class="btn btn-primary float-right">Nuevo restaurantes</a>
         </div>
 
         <div class="card-body">
@@ -20,23 +20,23 @@
                 <tr>
                     <th>ID</th>
                     <th>Nombre</th>
-                    <th>Descripcion</th>
-                    <th>ingredientes</th>
+                    <th>Direccion</th>
+                    <th>Telefono</th>
                     <th>Foto</th>
                     <th>Acciones</th>
                 </tr>
                 </thead>
                 <tbody>
-                	@foreach($pizzas as $pizza)
+                	@foreach($restaurants as $restaurant)
                     <tr>
-                        <td>{{ $pizza->id }}</td>
-                        <td>{{ $pizza->name }}</td>
-                        <td>{{ $pizza->description }}</td>
-                        <td>{{ $pizza->ingredients }}</td>
-                        <td><img src="{{ asset($pizza->picture) }}" alt="" width="90px"></td>
+                        <td>{{ $restaurant->id }}</td>
+                        <td>{{ $restaurant->name }}</td>
+                        <td>{{ $restaurant->address }}</td>
+                        <td>{{ $restaurant->telephone }}</td>
+                        <td><img src="{{ asset($restaurant->picture) }}" alt="" width="90px"></td>
                         <td >
-                            <a href="{{ route('pizza.edit', $pizza->id) }}" class="btn btn-success btn-sm"><i class="fa fa-edit"></i></a> |
-                            <form action="{{ route('pizza.destroy', $pizza->id) }}" method="POST" class="float-right">
+                            <a href="{{ route('restaurant.edit', $restaurant->id) }}" class="btn btn-success btn-sm"><i class="fa fa-edit"></i></a> |
+                            <form action="{{ route('restaurant.destroy', $restaurant->id) }}" method="POST" class="float-right">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger btn-sm">

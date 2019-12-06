@@ -5,10 +5,10 @@
     <div class="col-md-12">
         <div class="card">
             <div class="card-header">
-                Administrar pizzas <a href="{{ url('pizza/create') }}" class="btn btn-primary float-right">Nueva pizza</a>
+                Administrar restaurantes
             </div>
 
-            <form role="form" method="post" action="{{ route('pizza.store') }}" enctype="multipart/form-data">
+            <form role="form" method="post" action="{{ route('restaurant.store') }}" enctype="multipart/form-data">
                 @csrf
                 <div class="card-body">
 
@@ -16,23 +16,23 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Nombre</label>
-                            <input type="text" name="name" class="form-control" id="exampleInputEmail1" placeholder="Nombre de la pizza">
+                            <input type="text" name="name" class="form-control" id="exampleInputEmail1" placeholder="Nombre del restaurante">
                             @if($errors->has('name'))
-                                <div class="error">{{ $errors->first('firstname') }}</div>
+                                <div class="error">{{ $errors->first('name') }}</div>
                             @endif
                         </div>
                         <div class="form-group">
-                            <label for="ingredients">Ingredientes</label>
-                            <input type="text" name="ingredients" class="form-control" id="ingredients" placeholder="Pepperoni, queso">
-                            @if($errors->has('ingredients'))
-                                <div class="error">{{ $errors->first('ingredients') }}</div>
+                            <label for="address">Direccion</label>
+                            <input type="text" name="address" class="form-control" id="address" placeholder="Direccion">
+                            @if($errors->has('address'))
+                                <div class="error">{{ $errors->first('address') }}</div>
                             @endif
                         </div>
                         <div class="form-group">
-                            <label for="description" >Descripcción</label>
-                            <textarea class="form-control" id="description" name="description"></textarea>
-                            @if($errors->has('description'))
-                                <div class="error">{{ $errors->first('description') }}</div>
+                            <label for="telephone" >Telefono</label>
+                            <input type="text" name="telephone" class="form-control" id="address" placeholder="Teledono">
+                            @if($errors->has('telephone'))
+                                <div class="error">{{ $errors->first('telephone') }}</div>
                             @endif
                         </div>
                         <div class="form-group">
@@ -41,7 +41,7 @@
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input" id="picture" name="picture">
                                     <label class="custom-file-label" for="exampleInputFile">Seleccionar imagen</label>
-                                    @if($errors->has('name'))
+                                    @if($errors->has('picture'))
                                         <div class="error">{{ $errors->first('picture') }}</div>
                                     @endif
                                 </div>
@@ -59,6 +59,7 @@
 
                 <div class="card-footer">
                     <button type="submit" class="btn btn-primary">Submit</button>
+                    <a href="{{ url('restaurant/index') }}" class="btn btn-primary float-right">Regresar al listaoo</a>
                 </div>
             </form>
         </div>

@@ -24,24 +24,35 @@ class PizzaController extends Controller
     // save a pizza
     public function store(Request $request)
     {
+
     	$rules = [
     		'name' => 'required',
     		'description' => 'required',
     		'ingredients' => 'required',
-    		'picture' => 'required|image',
+
     	];
 
-    	$v = Validator::make($request->all());
+    	$v = Validator::make($request->all(), $rules);
 
-    	if($v->fails()) return back()->with('errors', $v->errors());
+    	if($v->fails()) {
+    	    dd($v);
+            return back()->withErrors($v);
+        }
 
     	$data = $request->all();
+        $picture = $request->file('picture');
+        /*$data['picture'] = $picture->store();*/
 
-    	$data['picture'] = $request->picture->store();
+        if ($request->hasFile('picture')) {
 
-    	Pizza::create($data);
+            $fileName = 'images/'.time().$picture->getClientOriginalName();
+            $picture->move(public_path('images'), $fileName);
+            $data['picture'] = $fileName;
+        }
 
-    	return redirect()->route('pizza.index');
+        Pizza::create($data);
+
+        return redirect()->route('pizza.index')->with('success','Pizza creada satisfactoriamente');
 
     }
 
@@ -53,7 +64,7 @@ class PizzaController extends Controller
     }
 
     // save changes a pizza
-    public function update(Request $requets, $id)
+    public function update(Request $request, $id)
     {
 
     	$pizza = Pizza::findOrFail($id);
@@ -79,7 +90,7 @@ class PizzaController extends Controller
 
     	$pizza->save();
 
-    	return redirect()->route('pizza.index');
+    	return redirect()->route('pizza.index')->with('success','Pizza modificada satisfactoriamente');
 
     }
 
@@ -90,7 +101,7 @@ class PizzaController extends Controller
 
         Pizza::destroy($id);
 
-        return redirect()->route('pizza.index');
+        return redirect()->route('pizza.index')->with('success','Pizza eliminada satisfactoriamente');
     }
 
 }

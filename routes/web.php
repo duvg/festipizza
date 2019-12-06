@@ -23,3 +23,4 @@ Auth::routes();
 
 
 Route::resource('pizza', 'PizzaController');
+Route::resource('restaurant', 'RestaurantController');
