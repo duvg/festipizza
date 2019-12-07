@@ -2,30 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c9a86db-4b74-4757-8d57-82baf68a80ed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1575644499550x665_728.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1575644514550x665_728.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1575644558550x665_728.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1575645728550x853_1C2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/restaurant/form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/restaurant/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/restaurant/results.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PizzaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PizzaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RestaurantController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RestaurantController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Restaurant.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Restaurant.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/apps.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pizza/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pizza/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pizza/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pizza/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -177,7 +155,8 @@
       <option name="presentableId" value="Default" />
       <updated>1575491177522</updated>
       <workItem from="1575491179387" duration="3426000" />
-      <workItem from="1575639938823" duration="6534000" />
+      <workItem from="1575639938823" duration="7135000" />
+      <workItem from="1575668477464" duration="4584000" />
     </task>
     <servers />
   </component>
@@ -198,7 +177,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
