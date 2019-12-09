@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Pizza;
 use App\Restaurant;
 use App\Vote;
 use Illuminate\Http\Request;
@@ -27,10 +28,11 @@ class HomeController extends Controller
     public function index()
     {
         // find all restaurants
-        $restaurants = Vote::where('user_id', '=', Auth::id())->pluck('restaurant_id');
-        $available = Restaurant::whereNotIn('id', $restaurants)->get();
-        $res = Restaurant::all();
-        dd($available);
-        return view('home');
+        $ids = Vote::where('user_id', '=', Auth::id())->pluck('restaurant_id');
+        $restaurants = Restaurant::whereNotIn('id', $ids)->get();
+        $pizzas = Pizza::all();
+
+
+        return view('home', compact('restaurants', 'pizzas'));
     }
 }
