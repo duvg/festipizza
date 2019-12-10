@@ -42,7 +42,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="password" >{{ __('Conttraseña') }}</label>
+                            <label for="password" >{{ __('Contraseña') }}</label>
 
 
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
