@@ -2,13 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c9a86db-4b74-4757-8d57-82baf68a80ed" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/thanks.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_06_163949_create_votes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_06_163949_create_votes_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/1575644499550x665_728.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/1575644514550x665_728.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/1575644558550x665_728.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/1575645728550x853_1C2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/1575646725550x665_728.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/1575646777550x665_728.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/1575646807550x668_155.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/1575646827550x388_895.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/1575671554550x668_155.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/1575671568550x664_1CD.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/1575671684550x550_A57.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -116,36 +136,42 @@
   </component>
   <component name="ProjectId" id="1UbzA1spSXT75LKkE6xBlCYrp0i" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views" />
       <recent name="$PROJECT_DIR$" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -162,6 +188,7 @@
       <workItem from="1575668477464" duration="4584000" />
       <workItem from="1575710940702" duration="7163000" />
       <workItem from="1575755858363" duration="716000" />
+      <workItem from="1575930606397" duration="9140000" />
     </task>
     <servers />
   </component>
@@ -189,5 +216,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="479" y="260" key="com.intellij.ide.util.TipDialog" timestamp="1575930605652">
+      <screen x="0" y="0" width="1600" height="865" />
+    </state>
+    <state x="479" y="260" key="com.intellij.ide.util.TipDialog/0.0.1600.865@0.0.1600.865" timestamp="1575930605652" />
   </component>
 </project>

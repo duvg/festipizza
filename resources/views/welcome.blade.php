@@ -12,12 +12,17 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
-                color: #000000;
+                background-color: #000 !important;
+                color: #FFF !important;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
+                background: url(images/vol.jpg) no-repeat center center fixed;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: 100% 100%;
             }
 
             .full-height {
@@ -49,7 +54,7 @@
             }
 
             .links > a {
-                color: #000000;
+                color: #FFF;
                 padding: 0 25px;
                 font-size: 13px;
                 font-weight: 600;
@@ -200,32 +205,24 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/home') }}">Inicio</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('login') }}">Iniciar Sesion</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a href="{{ route('register') }}">Registrate</a>
                         @endif
                     @endauth
                 </div>
             @endif
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
+            <div class="container">
+                <a href="{{ route('home') }}">
+                    <img src="{{ asset('images/votaya.png') }}" alt="" style="margin-top: 100px;">
+                </a>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+
+
             </div>
         </div>
 

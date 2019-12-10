@@ -4,30 +4,27 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
+            <div class="card" style="background: #000; border: thin solid #000; color: #FFF">
+                <div class="card-header" style="text-align: center"><h2>Elije la pizza que más te gusto</h2></div>
 
                 <div class="card-body">
                     <div class="row" id="restaurants">
                         @foreach($restaurants as $restaurant)
-                        <div class="col-md-3">
-                            <div class="card">
+                        <div class="col-md-3 mb-3">
+                            <div class="card" style="background: #000; border: thin solid #fff; color: #FFF">
                                 <img class="card-img-top" src="{{ asset($restaurant->picture) }}">
                                 <div class="card-block pl-1 pr-1 ">
-                                    <h4 class="card-title">{{ $restaurant->name }}</h4>
-                                    <div class="card-text">
-                                        Direccion:  {{ $restaurant->address }}
-                                        <br>
-                                        Telefono: {{ $restaurant->telephone }}
-                                    </div>
+                                    <h4 class="card-title" style="text-align: center">{{ $restaurant->name }}</h4>
+
                                 </div>
                                 <div class="card-footer">
-                                    <a href="" class="btn btn-primary btn-block showPizza" data-id="{{ $restaurant->id }}">Ver Pizzas</a>
+                                    <a href="{{ route('vote', $restaurant->id) }}" class="btn btn-primary btn-block showPizza" data-id="{{ $restaurant->id }}">Votar</a>
                                 </div>
                             </div>
                         </div>
                         @endforeach
                     </div>
+                    {{--
                     <div id="pizzas" style="display: none;">
                     <div class="row"  >
                         @foreach($pizzas as $pizza)
@@ -54,6 +51,7 @@
                         </div>
                     </div>
                     </div>
+                    --}}
                 </div>
             </div>
         </div>
@@ -67,7 +65,7 @@
 
         $(document).ready(function(){
             let pizza = [];
-
+    /*
             $('.showPizza').click(function(e){
                 e.preventDefault();
                 // get restaurant
@@ -105,7 +103,7 @@
                 $("#pizzas").slideUp();
                 $("#restaurants").slideDown();
             });
-
+*/
 
         });
     </script>

@@ -18,6 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/vote/{id}', 'HomeController@votes')->name('vote');
+Route::get('/thanks', 'HomeController@thanks')->name('thanks');
+
 
 Auth::routes();
 
