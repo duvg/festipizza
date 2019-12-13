@@ -17,7 +17,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        //$this->middleware('auth');
     }
 
     /**
@@ -25,10 +25,13 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index($miip = '0')
     {
+
+        //dd(\request()->ip());
         // find all restaurants
-        $ids = Vote::where('user_id', '=', Auth::id())->pluck('restaurant_id');
+
+        $ids = Vote::where('ip', '=', $miip)->pluck('restaurant_id');
         $restaurants = Restaurant::whereNotIn('id', $ids)->get();
 
 
@@ -53,8 +56,36 @@ class HomeController extends Controller
         }
     }
 
+    public function vote(Request $request)
+    {
+        //dd($request->all());
+        if($request->star == null)
+        {
+            return redirect()->back()->with('error', 'Debes seleccioanar almenos una estrella en una pizza');
+        }
+
+        if($request->star > 5)
+        {
+            return redirect()->back()->with('error', 'Puntaje invalido');
+        }
+        $vote = new Vote();
+        $vote->restaurant_id = $request->id;
+        $vote->ip = $request->miip();
+        $vote->star = $request->star;
+        $vote->save();
+        return redirect()->to('/thanks');
+    }
+
     public function thanks()
     {
         return view('thanks');
+    }
+
+    public function results()
+    {
+        $restaurants = Restaurant::with('votes')->get();
+        dd($restaurants);
+
+        return view('results', compact('restaurants'));
     }
 }

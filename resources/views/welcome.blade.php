@@ -11,6 +11,9 @@
 
         <!-- Styles -->
         <style>
+
+
+            /* mobile first */
             html, body {
                 background-color: #000 !important;
                 color: #FFF !important;
@@ -22,8 +25,67 @@
                 -webkit-background-size: cover;
                 -moz-background-size: cover;
                 -o-background-size: cover;
-                background-size: 100% 100%;
+                background-size: 100% auto;
             }
+             .votaya{
+                 margin-top: 300px;
+                 margin-left: auto;
+                 margin-right: auto;
+                 width: 70%;
+             }
+
+            /* tabletas */
+            @media (min-width: 768px) {
+                html, body {
+                    background-color: #000 !important;
+                    color: #FFF !important;
+                    font-family: 'Nunito', sans-serif;
+                    font-weight: 200;
+                    height: 100vh;
+                    margin: 0;
+                    background: url(images/vol.jpg) no-repeat center center fixed;
+                    -webkit-background-size: cover;
+                    -moz-background-size: cover;
+                    -o-background-size: cover;
+                    background-size: 100% 100%;
+                }
+            }
+
+            /* escritorio normales */
+            @media (min-width: 992px) {
+                html, body {
+                    background-color: #000 !important;
+                    color: #FFF !important;
+                    font-family: 'Nunito', sans-serif;
+                    font-weight: 200;
+                    height: 100vh;
+                    margin: 0;
+                    background: url(images/vol.jpg) no-repeat center center fixed;
+                    -webkit-background-size: cover;
+                    -moz-background-size: cover;
+                    -o-background-size: cover;
+                    background-size: 100% 100%;
+                }
+            }
+
+            /* pantallas grandes */
+            @media (min-width: 1200px) {
+                html, body {
+                    background-color: #000 !important;
+                    color: #FFF !important;
+                    font-family: 'Nunito', sans-serif;
+                    font-weight: 200;
+                    height: 100vh;
+                    margin: 0;
+                    background: url(images/vol.jpg) no-repeat center center fixed;
+                    -webkit-background-size: cover;
+                    -moz-background-size: cover;
+                    -o-background-size: cover;
+                    background-size: 100% 100%;
+                }
+            }
+
+
 
             .full-height {
                 height: 100vh;
@@ -216,22 +278,23 @@
                 </div>
             @endif
 
-            <div class="container">
-                <a href="{{ route('home') }}">
-                    <img src="{{ asset('images/votaya.png') }}" alt="" style="margin-top: 100px;">
+            <div class="container" style="text-align: center">
+                <a href="{{ route('home', ['miip'=> \Request::ip() ]) }}">
+                    <img src="{{ asset('images/votaya.png') }}" alt="" class="votaya">
                 </a>
 
 
 
             </div>
         </div>
-
+    @javascript('key', 'duviel')
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <script>
-        $(document).ready( function() {
 
+        $(document).ready( function() {
+            localStorage.setItem("miip", "{{ \Request::ip() }}");
             /*
              * ... all of your jQuery ...
              */

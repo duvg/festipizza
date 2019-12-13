@@ -17,8 +17,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home/{miip}', 'HomeController@index')->name('home')->defaults('miip', '0');
+Route::get('/results', 'HomeController@results')->name('results');
 Route::get('/vote/{id}', 'HomeController@votes')->name('vote');
+Route::post('/votes', 'HomeController@vote')->name('votes');
 Route::get('/thanks', 'HomeController@thanks')->name('thanks');
 
 

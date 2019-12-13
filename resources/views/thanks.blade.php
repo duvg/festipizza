@@ -22,7 +22,58 @@
                 -webkit-background-size: cover;
                 -moz-background-size: cover;
                 -o-background-size: cover;
-                background-size: 100% 100%;
+                background-size: 100% auto;
+            }
+
+            /* tabletas */
+            @media (min-width: 768px) {
+                html, body {
+                    background-color: #000 !important;
+                    color: #FFF !important;
+                    font-family: 'Nunito', sans-serif;
+                    font-weight: 200;
+                    height: 100vh;
+                    margin: 0;
+                    background: url(images/thanks.jpg) no-repeat center center fixed;
+                    -webkit-background-size: cover;
+                    -moz-background-size: cover;
+                    -o-background-size: cover;
+                    background-size: 100% 100%;
+                }
+            }
+
+            /* escritorio normales */
+            @media (min-width: 992px) {
+                html, body {
+                    background-color: #000 !important;
+                    color: #FFF !important;
+                    font-family: 'Nunito', sans-serif;
+                    font-weight: 200;
+                    height: 100vh;
+                    margin: 0;
+                    background: url(images/thanks.jpg) no-repeat center center fixed;
+                    -webkit-background-size: cover;
+                    -moz-background-size: cover;
+                    -o-background-size: cover;
+                    background-size: 100% 100%;
+                }
+            }
+
+            /* pantallas grandes */
+            @media (min-width: 1200px) {
+                html, body {
+                    background-color: #000 !important;
+                    color: #FFF !important;
+                    font-family: 'Nunito', sans-serif;
+                    font-weight: 200;
+                    height: 100vh;
+                    margin: 0;
+                    background: url(images/thanks.jpg) no-repeat center center fixed;
+                    -webkit-background-size: cover;
+                    -moz-background-size: cover;
+                    -o-background-size: cover;
+                    background-size: 100% 100%;
+                }
             }
 
             .full-height {

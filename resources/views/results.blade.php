@@ -65,7 +65,7 @@
 
                 <div class="card-body">
                     <div class="row" id="restaurants">
-                        @foreach($restaurants as $restaurant)
+                        @foreach($restaurants->votes as $restaurant)
                         <div class="col-md-3 mb-3">
                             <div class="card" style="background: #000; border: thin solid #fff; color: #FFF">
                                 <img class="card-img-top" src="{{ asset($restaurant->picture) }}">

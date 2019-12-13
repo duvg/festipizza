@@ -35,7 +35,7 @@ class PizzaController extends Controller
     	$v = Validator::make($request->all(), $rules);
 
     	if($v->fails()) {
-    	    dd($v);
+
             return back()->withErrors($v);
         }
 
